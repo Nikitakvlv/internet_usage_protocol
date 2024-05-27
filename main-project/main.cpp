@@ -28,21 +28,21 @@ int main() {
     }
     infile.close();
 
-    // Фильтрация по программе Skype
+    // Г”ГЁГ«ГјГІГ°Г Г¶ГЁГї ГЇГ® ГЇГ°Г®ГЈГ°Г Г¬Г¬ГҐ Skype
     auto skypeSessions = filterByProgram(sessions, "Skype");
 
-    // Фильтрация по времени
+    // Г”ГЁГ«ГјГІГ°Г Г¶ГЁГї ГЇГ® ГўГ°ГҐГ¬ГҐГ­ГЁ
     Time threshold(8, 0, 0);
     auto after8Sessions = filterByStartTime(sessions, threshold);
 
-    // Сортировка
+    // Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ 
     auto sortedByUsageTime = sessions;
     insertionSort(sortedByUsageTime, usageTimeDescending);
 
     auto sortedByProgram = sessions;
     quickSort(sortedByProgram, programAscending);
 
-    // Вывод результатов
+    // Г‚Г»ГўГ®Г¤ Г°ГҐГ§ГіГ«ГјГІГ ГІГ®Гў
     std::cout << "Sessions using Skype:\n";
     printSessions(skypeSessions);
 
