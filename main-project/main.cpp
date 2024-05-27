@@ -7,7 +7,7 @@
 
 int main() {
     std::vector<InternetSession> sessions;
-    std::ifstream infile("data/input.txt");
+    std::ifstream infile("data.txt");
 
     if (!infile) {
         std::cerr << "Error opening file." << std::endl;
